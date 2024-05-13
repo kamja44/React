@@ -1,20 +1,21 @@
-import type * as T from "./types";
+import type * as T from './types'
 
 export const setUser = (payload: T.State): T.SetUserAction => ({
-  type: "@remoteUser/setUser",
-  payload,
-});
+  type: '@remoteUser/setUser',
+  payload
+})
+
 export const changeEmail = (payload: string): T.ChangeEmailAction => ({
-  type: "@remoteUser/changeEmail",
-  payload,
-});
+  type: '@remoteUser/changeEmail',
+  payload
+})
+
 export const changeName = (payload: T.NameType): T.ChangeNameAction => ({
-  type: "@remoteUser/ChangeName",
-  payload,
-});
-export const changePicture = (
-  payload: T.PictureType
-): T.ChangePictureAction => ({
-  type: "@remoteUser/changePicture",
-  payload,
-});
+  type: '@remoteUser/changeName',
+  payload
+})
+
+export const changePicture = (payload: T.PictureType): T.ChangePictureAction => ({
+  type: '@remoteUser/changePicture',
+  payload
+})

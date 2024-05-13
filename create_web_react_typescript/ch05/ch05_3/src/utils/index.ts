@@ -1,1 +1,1 @@
-export * from "./imageFileReaderP";
+export * from './imageFileReaderP'

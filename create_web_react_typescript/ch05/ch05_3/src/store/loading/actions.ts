@@ -1,6 +1,6 @@
-import type * as T from "./types";
+import type * as T from './types'
 
 export const setLoading = (payload: T.State): T.SetLoadingAction => ({
-  type: "@loading/setLoadingAction",
-  payload,
-});
+  type: '@loading/setLoadingAction',
+  payload
+})

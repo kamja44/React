@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import {useEffect} from 'react'
 
 export const useEventListener = (
   target: EventTarget | null,
@@ -6,7 +6,9 @@ export const useEventListener = (
   callback: EventListenerOrEventListenerObject | null
 ) => {
   useEffect(() => {
-    target?.addEventListener(type, callback);
-    return () => target?.removeEventListener(type, callback);
-  }, [target, type, callback]);
-};
+    if (target && callback) {
+      target.addEventListener(type, callback)
+      return () => target.removeEventListener(type, callback)
+    }
+  }, [target, type, callback])
+}

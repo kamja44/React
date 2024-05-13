@@ -1,10 +1,10 @@
-import type { FC } from "react";
-import type { ReactDivProps } from "./Div";
-import { Div } from "./Div";
+import type {FC} from 'react'
+import type {ReactDivProps} from './Div'
+import {Div} from './Div'
 
 export type OverlayProps = ReactDivProps & {
-  opacityClass?: string;
-};
+  opacityClass?: string
+}
 
 export const Overlay: FC<OverlayProps> = ({
   className: _className,
@@ -14,14 +14,13 @@ export const Overlay: FC<OverlayProps> = ({
 }) => {
   const className = [
     _className,
-    "absolute z-50 w-screen h-screen",
-    opacityClass ?? "bg-black/70",
-    "flex items-center justify-center",
-  ].join(" ");
+    'absolute z-50 w-screen h-screen',
+    opacityClass ?? 'bg-black/70',
+    'flex items-center justify-center'
+  ].join(' ')
 
+  // prettier-ignore
   return (
-    <Div {...props} className={className} top="0" left="0">
-      {children}
-    </Div>
-  );
-};
+    <Div {...props} className={className} top="0" left="0">{children}</Div>
+  )
+}
